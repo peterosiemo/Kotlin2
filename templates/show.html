@@ -1,0 +1,37 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <br><br><br><br>
+<table class = "table table-info table-striped container">
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone No.</th>
+    <th>DateTime</th>
+    <th>Department</th>
+    <th>Doctor</th>
+    <th>Massage</th>
+    <th>Action</th>
+
+</tr>
+{% for x in appointment %}
+    <tr>
+        <td>{{ x.name }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone }}</td>
+        <td>{{ x.datetime }}</td>
+        <td>{{ x.department }}</td>
+        <td>{{ x.doctor }}</td>
+        <td>{{ x.message }}</td>
+        <td>
+            <a href="" CLASS="btn btn-warning">EDIT</a>
+            <a href="" class="btn btn-danger">DELETE</a>
+            <a href=""class="btn btn-primary">PAY</a>
+        </td>
+        
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}
